@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine Ski Resorts Guide 2026</title>
+    <style>
+      /* SCSS converted to CSS */
+      :root {
+        --primary-color: #1a4b84;
+        --secondary-color: #e8f1f8;
+        --accent-color: #ff6b6b;
+        --text-color: #333;
+        --light-bg: #f8f9fa;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--light-bg);
+      }
+
+      .header {
+        background: linear-gradient(135deg, var(--primary-color), #2c3e50);
+        color: white;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .nav {
+        background: white;
+        padding: 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .nav a {
+        text-decoration: none;
+        color: var(--primary-color);
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+      }
+
+      .nav a:hover {
+        background-color: var(--secondary-color);
+        color: var(--accent-color);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .country-section {
+        margin-bottom: 3rem;
+        background: white;
+        border-radius: 8px;
+        padding: 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .country-section h2 {
+        color: var(--primary-color);
+        border-bottom: 3px solid var(--accent-color);
+        padding-bottom: 0.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .resort-card {
+        background: var(--secondary-color);
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .resort-card h3 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      .cost-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin: 1rem 0;
+        background: white;
+        padding: 1rem;
+        border-radius: 6px;
+      }
+
+      .cost-item {
+        padding: 0.5rem;
+      }
+
+      .cost-item strong {
+        color: var(--accent-color);
+      }
+
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 2rem 0;
+        background: white;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 1rem;
+        text-align: left;
+        border: 1px solid #ddd;
+      }
+
+      .comparison-table th {
+        background: var(--primary-color);
+        color: white;
+      }
+
+      .comparison-table tr:nth-child(even) {
+        background: var(--secondary-color);
+      }
+
+      .filter-controls {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .filter-group {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .filter-controls select {
+        padding: 0.5rem;
+        border: 1px solid var(--primary-color);
+        border-radius: 4px;
+        background-color: white;
+        color: var(--primary-color);
+        font-size: 1rem;
+        cursor: pointer;
+      }
+
+      .filter-controls select:hover {
+        border-color: var(--accent-color);
+      }
+
+      .filter-controls label {
+        font-weight: 600;
+        color: var(--primary-color);
+      }
+
+      @media (max-width: 768px) {
+        .nav ul {
+          flex-direction: column;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        .cost-info {
+          grid-template-columns: 1fr;
+        }
+
+        .comparison-table {
+          display: block;
+          overflow-x: auto;
+        }
+
+        .filter-controls {
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Alpine Ski Resorts Guide 2026</h1>
+      <p>Your comprehensive guide to the best ski resorts in Switzerland, Austria, France, and Italy</p>
+    </header>
+    <nav class="nav">
+      <ul>
+        <li>
+          <a href="#switzerland">Switzerland</a>
+        </li>
+        <li>
+          <a href="#austria">Austria</a>
+        </li>
+        <li>
+          <a href="#france">France</a>
+        </li>
+        <li>
+          <a href="#italy">Italy</a>
+        </li>
+        <li>
+          <a href="#comparison">Cost Comparison</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+      <section id="switzerland" class="country-section">
+        <h2>Switzerland</h2>
+        <div class="resort-card">
+          <h3>1. Zermatt</h3>
+          <p>Famed for its stunning views of the Matterhorn and car-free village charm. Features well-groomed runs and ample off-piste areas.</p>
+          <div class="cost-info">
+            <div class="cost-item">
+              <strong>Flight & Transfers:</strong>
+              <p>March: €300 <br>January: €320 </p>
+            </div>
+            <div class="cost-item">
+              <strong>Accommodation:</strong>
+              <p>€200-220 per night</p>
+            </div>
+            <div class="cost-item">
+              <strong>Daily Ski Pass:</strong>
+              <p>March: €75 <br>January: €80 </p>
+            </div>
+          </div>
+        </div>
+        <div class="resort-card">
+          <h3>2. Verbier</h3>
+          <p>Known for challenging terrain with extensive off-piste possibilities and lively après-ski scene.</p>
+          <div class="cost-info">
+            <div class="cost-item">
+              <strong>Flight & Transfers:</strong>
+              <p>€300-320</p>
+            </div>
+            <div class="cost-item">
+              <strong>Accommodation:</strong>
+              <p>€200 per night</p>
+            </div>
+            <div class="cost-item">
+              <strong>Daily Ski Pass:</strong>
+              <p>€75-80</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="austria" class="country-section">
+        <h2>Austria</h2>
+        <div class="resort-card">
+          <h3>3. St. Anton am Arlberg</h3>
+          <p>World-renowned for deep snow, varied pistes, and excellent off-piste terrain.</p>
+          <div class="cost-info">
+            <div class="cost-item">
+              <strong>Flight & Transfers:</strong>
+              <p>€250-270</p>
+            </div>
+            <div class="cost-item">
+              <strong>Accommodation:</strong>
+              <p>€150 per night</p>
+            </div>
+            <div class="cost-item">
+              <strong>Daily Ski Pass:</strong>
+              <p>€55-60</p>
+            </div>
+          </div>
+        </div>
+        <div class="resort-card">
+          <h3>4. Kitzbühel</h3>
+          <p>Combines historic town feel with modern skiing facilities.</p>
+          <div class="cost-info">
+            <div class="cost-item">
+              <strong>Flight & Transfers:</strong>
+              <p>€250</p>
+            </div>
+            <div class="cost-item">
+              <strong>Accommodation:</strong>
+              <p>€140-150 per night</p>
+            </div>
+            <div class="cost-item">
+              <strong>Daily Ski Pass:</strong>
+              <p>€50-55</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="france" class="country-section">
+        <h2>France</h2>
+        <div class="resort-card">
+          <h3>5. Chamonix Mont-Blanc</h3>
+          <p>Iconic resort known for dramatic alpine scenery and extensive off-piste options.</p>
+          <div class="cost-info">
+            <div class="cost-item">
+              <strong>Flight & Transfers:</strong>
+              <p>€300</p>
+            </div>
+            <div class="cost-item">
+              <strong>Accommodation:</strong>
+              <p>€200 per night</p>
+            </div>
+            <div class="cost-item">
+              <strong>Daily Ski Pass:</strong>
+              <p>€65-70</p>
+            </div>
+          </div>
+        </div>
+        <div class="resort-card">
+          <h3>6. Courchevel</h3>
+          <p>Part of Trois Vallées area with meticulously groomed runs and luxury amenities.</p>
+          <div class="cost-info">
+            <div class="cost-item">
+              <strong>Flight & Transfers:</strong>
+              <p>€300-320</p>
+            </div>
+            <div class="cost-item">
+              <strong>Accommodation:</strong>
+              <p>€220-250 per night</p>
+            </div>
+            <div class="cost-item">
+              <strong>Daily Ski Pass:</strong>
+              <p>€70-75</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="italy" class="country-section">
+        <h2>Italy</h2>
+        <div class="resort-card">
+          <h3>7. Cervinia</h3>
+          <p>High-altitude skiing with shared slopes with Zermatt.</p>
+          <div class="cost-info">
+            <div class="cost-item">
+              <strong>Flight & Transfers:</strong>
+              <p>€280-300</p>
+            </div>
+            <div class="cost-item">
+              <strong>Accommodation:</strong>
+              <p>€150 per night</p>
+            </div>
+            <div class="cost-item">
+              <strong>Daily Ski Pass:</strong>
+              <p>€60-65</p>
+            </div>
+          </div>
+        </div>
+        <div class="resort-card">
+          <h3>8. Livigno</h3>
+          <p>Known for tax-free status and family-friendly environment.</p>
+          <div class="cost-info">
+            <div class="cost-item">
+              <strong>Flight & Transfers:</strong>
+              <p>€270-290</p>
+            </div>
+            <div class="cost-item">
+              <strong>Accommodation:</strong>
+              <p>€130-140 per night</p>
+            </div>
+            <div class="cost-item">
+              <strong>Daily Ski Pass:</strong>
+              <p>€50-55</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="comparison" class="country-section">
+        <h2>Cost Comparison</h2>
+        <div class="filter-controls">
+          <div class="filter-group">
+            <label for="countryFilter">Filter by Country:</label>
+            <select id="countryFilter">
+              <option value="all">All Countries</option>
+              <option value="Switzerland">Switzerland</option>
+              <option value="Austria">Austria</option>
+              <option value="France">France</option>
+              <option value="Italy">Italy</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="monthFilter">Filter by Month:</label>
+            <select id="monthFilter">
+              <option value="all">All Months</option>
+              <option value="January">January</option>
+              <option value="March">March</option>
+            </select>
+          </div>
+        </div>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Resort</th>
+              <th>Country</th>
+              <th>Season</th>
+              <th>Flight & Transfers</th>
+              <th>Accommodation</th>
+              <th>Daily Ski Pass</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Zermatt</td>
+              <td>Switzerland</td>
+              <td>January</td>
+              <td>€320</td>
+              <td>€220</td>
+              <td>€80</td>
+            </tr>
+            <tr>
+              <td>Zermatt</td>
+              <td>Switzerland</td>
+              <td>March</td>
+              <td>€300</td>
+              <td>€200</td>
+              <td>€75</td>
+            </tr>
+            <tr>
+              <td>Verbier</td>
+              <td>Switzerland</td>
+              <td>January</td>
+              <td>€320</td>
+              <td>€200</td>
+              <td>€80</td>
+            </tr>
+            <tr>
+              <td>Verbier</td>
+              <td>Switzerland</td>
+              <td>March</td>
+              <td>€300</td>
+              <td>€200</td>
+              <td>€75</td>
+            </tr>
+            <tr>
+              <td>St. Anton</td>
+              <td>Austria</td>
+              <td>January</td>
+              <td>€270</td>
+              <td>€150</td>
+              <td>€60</td>
+            </tr>
+            <tr>
+              <td>St. Anton</td>
+              <td>Austria</td>
+              <td>March</td>
+              <td>€250</td>
+              <td>€150</td>
+              <td>€55</td>
+            </tr>
+            <tr>
+              <td>Kitzbühel</td>
+              <td>Austria</td>
+              <td>January</td>
+              <td>€250</td>
+              <td>€150</td>
+              <td>€55</td>
+            </tr>
+            <tr>
+              <td>Kitzbühel</td>
+              <td>Austria</td>
+              <td>March</td>
+              <td>€250</td>
+              <td>€140</td>
+              <td>€50</td>
+            </tr>
+            <tr>
+              <td>Chamonix</td>
+              <td>France</td>
+              <td>January</td>
+              <td>€320</td>
+              <td>€200</td>
+              <td>€70</td>
+            </tr>
+            <tr>
+              <td>Chamonix</td>
+              <td>France</td>
+              <td>March</td>
+              <td>€300</td>
+              <td>€200</td>
+              <td>€65</td>
+            </tr>
+            <tr>
+              <td>Courchevel</td>
+              <td>France</td>
+              <td>January</td>
+              <td>€320</td>
+              <td>€250</td>
+              <td>€75</td>
+            </tr>
+            <tr>
+              <td>Courchevel</td>
+              <td>France</td>
+              <td>March</td>
+              <td>€300</td>
+              <td>€220</td>
+              <td>€70</td>
+            </tr>
+            <tr>
+              <td>Cervinia</td>
+              <td>Italy</td>
+              <td>January</td>
+              <td>€300</td>
+              <td>€150</td>
+              <td>€65</td>
+            </tr>
+            <tr>
+              <td>Cervinia</td>
+              <td>Italy</td>
+              <td>March</td>
+              <td>€280</td>
+              <td>€150</td>
+              <td>€60</td>
+            </tr>
+            <tr>
+              <td>Livigno</td>
+              <td>Italy</td>
+              <td>January</td>
+              <td>€290</td>
+              <td>€140</td>
+              <td>€55</td>
+            </tr>
+            <tr>
+              <td>Livigno</td>
+              <td>Italy</td>
+              <td>March</td>
+              <td>€270</td>
+              <td>€130</td>
+              <td>€50</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+    <script>
+      function filterTable() {
+        const countryFilter = document.getElementById('countryFilter').value;
+        const monthFilter = document.getElementById('monthFilter').value;
+        const rows = document.querySelectorAll('.comparison-table tbody tr');
+        rows.forEach(row => {
+          const country = row.cells[1].textContent;
+          const month = row.cells[2].textContent;
+          const countryMatch = countryFilter === 'all' || country === countryFilter;
+          const monthMatch = monthFilter === 'all' || month === monthFilter;
+          row.style.display = countryMatch && monthMatch ? '' : 'none';
+        });
+      }
+      // Add event listeners to filters
+      document.getElementById('countryFilter').addEventListener('change', filterTable);
+      document.getElementById('monthFilter').addEventListener('change', filterTable);
+    </script>
+  </body>
+</html>
